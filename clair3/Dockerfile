@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM nfcore/base:1.9
 
 COPY clair3.yml /
 

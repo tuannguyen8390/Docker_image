@@ -1,8 +1,7 @@
-name: clair3-env
+name: winnowmap2-env
 channels:
   - bioconda
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6.10
-  - clair3=0.1.11
+  - winnowmap=2.03

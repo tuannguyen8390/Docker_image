@@ -1,8 +1,7 @@
-name: clair3-env
+name: minimap2-env
 channels:
   - bioconda
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6.10
-  - clair3=0.1.11
+  - minimap2=2.24

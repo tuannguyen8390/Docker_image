@@ -1,8 +1,7 @@
-name: clair3-env
+name: ngmlr-env
 channels:
   - bioconda
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6.10
-  - clair3=0.1.11
+  - ngmlr=0.2.7

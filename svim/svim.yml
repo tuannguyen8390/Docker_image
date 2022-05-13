@@ -1,0 +1,5 @@
+name: svim-env
+channels:
+  - bioconda
+dependencies:
+  - svim=1.4.2
