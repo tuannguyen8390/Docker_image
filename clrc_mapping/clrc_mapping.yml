@@ -1,0 +1,11 @@
+name: clrc_mapping_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - samtools=1.15.1 
+  - minimap2=2.24
+  - bwa=0.7.17
+  - ngmlr=0.2.7
+  - winnowmap=2.03

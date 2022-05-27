@@ -1,0 +1,13 @@
+name: clrc-mapping-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.6
+  - sambamba=0.8.2
+  - nanosv=1.2.3
+  - cutesv=1.0.13
+  - sniffles=2.0.6
+  - svim=1.4.2
+
