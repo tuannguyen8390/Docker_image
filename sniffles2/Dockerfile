@@ -1,11 +1,11 @@
-FROM nfcore/base:1.9
+FROM ubuntu:20.04
 
-COPY sniffles2.yml /
+LABEL software="CLRC - Sniffles2 module"
+LABEL description="Sniffles2 module"
+LABEL version="2.0.6"
+LABEL maintainer="Tuan Nguyen"
+LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au"
 
-SHELL ["/bin/bash", "--login", "-c"]
+RUN apt-get update && apt-get install software-properties-common -y && add-apt-repository ppa:deadsnakes/ppa && apt-get install python3.9 python3-pip libbz2-dev liblzma-dev -y
 
-RUN conda env create -f /sniffles2.yml && conda clean -a
-
-RUN conda activate sniffles2-env
-
-ENV PATH /opt/conda/envs/sniffles2-env/bin:$PATH
+RUN pip install sniffles
