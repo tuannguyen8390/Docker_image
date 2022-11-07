@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 LABEL software="CLRC - Sniffles2 module"
 LABEL description="Sniffles2 module"
-LABEL version="2.0.6"
+LABEL version="2.0.7"
 LABEL maintainer="Tuan Nguyen"
 LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au"
 
