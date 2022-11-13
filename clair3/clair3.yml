@@ -1,7 +1,0 @@
-name: clair3-env
-channels:
-  - bioconda
-  - conda-forge
-  - defaults
-dependencies:
-  - clair3=0.1.12
