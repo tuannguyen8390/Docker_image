@@ -1,12 +1,13 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
+ENV DEBIAN_FRONTEND noninteractive
 
 LABEL software="CLRC - Filtlong module"
 LABEL description="Filtlong module"
 LABEL version="0.2.1"
 LABEL maintainer="Tuan Nguyen"
-LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au"
+LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au" 
 
-RUN apt-get update && apt-get install git zlib1g zlib1g-dev libbz2-dev liblzma-dev wget tar gcc g++ make autoconf locales bash -y
+RUN apt-get update && apt-get install git zlib1g zlib1g-dev libbz2-dev liblzma-dev wget tar gcc g++ make autoconf locales python3-pip bash -y
 RUN locale-gen en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
 
@@ -18,5 +19,9 @@ ENV PATH=$PATH:/Filtlong/bin
 ENV PATH=$PATH:/Filtlong/htslib
 ENV PATH=$PATH:/seqtk
 ENV PATH=$PATH:/htslib
+
+RUN pip3 install --upgrade cython
+RUN pip3 install --upgrade NanoPlot
+
 
 

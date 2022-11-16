@@ -9,3 +9,5 @@ dependencies:
   - ropebwt2=r187
   - fmlrc2=0.1.7
   - nanofilt=2.8.0
+  - nanoplot=1.40.2
+

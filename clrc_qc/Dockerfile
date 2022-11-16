@@ -1,4 +1,4 @@
-FROM nfcore/base:1.9
+FROM continuumio/miniconda3:latest
 
 LABEL software="CLRC - QC module"
 LABEL description="Toolkit for processing sequences in FASTA/Q formats"
@@ -7,6 +7,7 @@ LABEL seqtk.version="1.3"
 LABEL ropebwt2.version="r187"
 LABEL nanofilt.version="2.8.0"
 LABEL fmlrc2.version="0.1.7"
+LABEL nanoplot="1.40.2"
 LABEL maintainer="Tuan Nguyen"
 LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au"
 
