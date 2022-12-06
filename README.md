@@ -1,6 +1,7 @@
 # Docker image
- Dockerfile of several common programs
+ Dockerfile of many common programs that I'm frequently using
 
- Untested :P, used at your own risks
+ Untested & very personalized :P, used at your own risks
+ 
 
- Tuan Nguyen | Updated Feb 2022
+ Tuan Nguyen | Updated Dec 2022
