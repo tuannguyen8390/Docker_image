@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:latest
+FROM continuumio/miniconda3:4.12.0
 
 LABEL software="CLRC - QC module"
 LABEL description="Toolkit for processing sequences in FASTA/Q formats"

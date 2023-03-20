@@ -10,4 +10,5 @@ dependencies:
   - fmlrc2=0.1.7
   - nanofilt=2.8.0
   - nanoplot=1.40.2
+  - porechop_abi=0.5.0
 
