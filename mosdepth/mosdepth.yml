@@ -1,0 +1,5 @@
+name: mosdepth-env
+channels:
+  - bioconda
+dependencies:
+  - mosdepth

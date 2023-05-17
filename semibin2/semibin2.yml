@@ -1,8 +1,9 @@
-name: minimap2-env
+name: SemiBin2
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
-  - samtools=1.15.1 
-  - minimap2=2.24
+  - python=3.8
+  - semibin
+

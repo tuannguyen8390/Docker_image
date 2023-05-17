@@ -3,15 +3,16 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG PATH="/root/miniconda3/bin:${PATH}"
 
-LABEL software="CLRC - Sniffles2 module"
-LABEL description="Sniffles2 module"
-LABEL version="2.0.7"
+LABEL software="dysgu"
+LABEL version="1.3.16"
+LABEL github_repo="https://github.com/kcleal/dysgu"
 LABEL maintainer="Tuan Nguyen"
 LABEL maintainer.email="tuan.nguyen@agriculture.vic.gov.au"
+LABEL github_repo="https://github.com/tjiangHIT/cuteSV"
 
 RUN apt-get update && apt-get install python3.9 python3-pip libbz2-dev liblzma-dev -y
 
-RUN pip install sniffles
+RUN pip install numpy dysgu
 
 RUN apt-get install wget -y 
 

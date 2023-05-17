@@ -1,0 +1,12 @@
+FROM continuumio/miniconda3
+
+# Install micromamba and create SemiBin2 environment
+RUN wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba && \
+    chmod +x ./bin/micromamba && \
+    ./bin/micromamba create -n SemiBin2 -c conda-forge -c bioconda python=3.8 semibin && \
+    ./bin/micromamba clean --all --yes
+RUN echo "conda activate base" >> ~/.bashrc && \
+    echo "eval \"\$(micromamba shell hook --shell=bash)\"" >> ~/.bashrc
+
+
+ENV PATH ./root/micromamba/envs/SemiBin2/bin/:$PATH
