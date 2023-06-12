@@ -1,4 +1,4 @@
-name: spectre
+name: spectre-env
 channels:
     - conda-forge
     - bioconda
