@@ -7,4 +7,7 @@ RUN git clone https://github.com/fritzsedlazeck/Spectre
 WORKDIR /Spectre
 RUN cp spectre.py /usr/local/bin/
 
-CMD [ "python", "spectre.py" ]
+ENV PATH /Spectre:$PATH
+
+CMD ["/bin/bash"]
+
