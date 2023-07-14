@@ -23,3 +23,5 @@ RUN wget \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 
 RUN conda install -c bioconda tabix
+
+RUN chmod -R 777 /root/.conda
