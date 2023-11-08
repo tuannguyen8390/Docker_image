@@ -45,3 +45,24 @@ RUN cargo install --target x86_64-unknown-linux-musl --path .
 FROM alpine:3.12.4
 # RUN apk add --no-cache bash # My workflow required a bash entrypoint. Commented it out for a more general use.
 COPY --from=install-longshot /root/.cargo/bin/longshot /bin/longshot
+
+FROM alpine:3.12.4
+
+# Install necessary dependencies
+RUN apk add --no-cache curl bash
+
+# Install Miniconda
+RUN curl -o miniconda.sh -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && chmod +x miniconda.sh \
+    && ./miniconda.sh -b -p /opt/miniconda \
+    && rm miniconda.sh
+
+# Add Miniconda to PATH
+ENV PATH=/opt/miniconda/bin:$PATH
+
+# Install tabix using conda
+RUN conda install -y -c bioconda tabix
+
+# Clean up unnecessary files and packages
+RUN conda clean -ya \
+    && apk del curl
