@@ -16,6 +16,7 @@ RUN git clone https://github.com/samtools/htslib && cd htslib && git submodule u
 ENV PATH=$PATH:/Filtlong/bin
 ENV PATH=$PATH:/Filtlong/htslib
 ENV PATH=$PATH:/seqtk
+ENV PATH=$PATH:/seqkit
 ENV PATH=$PATH:/htslib
 
 RUN pip3 install --upgrade cython
@@ -24,6 +25,7 @@ RUN pip3 install --upgrade NanoPlot
 RUN conda config --add channels conda-forge
 RUN conda config --add channels bioconda
 RUN conda install porechop_abi=0.5.0
+RUN conda install seqkit=2.8.2
 
 
 
