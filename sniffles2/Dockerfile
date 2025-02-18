@@ -14,5 +14,3 @@ RUN apt-get update && apt-get install python3-pip libbz2-dev liblzma-dev -y
 RUN conda install -c bioconda tabix
 
 RUN pip install sniffles==2.6.0
-
-
